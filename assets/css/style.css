@@ -5,7 +5,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  /* background: #f6f9ff; */
+  background: #f6f9ff;
   color: #444444;
 }
 
@@ -51,6 +51,26 @@ h6 {
   width: 4rem;
   position: absolute;
 }
+
+/* horizontal scroll menu */
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+div.scrollmenu a:hover {
+  background-color: #18d26e;
+}
+
+
 
 /*--------------------------------------------------------------
 # Override some default Bootstrap stylings
@@ -170,7 +190,7 @@ h6 {
 
 /* Card */
 .card {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   border: none;
   border-radius: 5px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);

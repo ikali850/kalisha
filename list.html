@@ -1,955 +1,795 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-        <title>List Page!</title>
-        <meta content name="description" />
-        <meta content name="keywords" />
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-        <!-- Favicons -->
-        <link href="assets/img/favicon.png" rel="icon" />
-        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <title>List Page!</title>
+    <meta content name="description" />
+    <meta content name="keywords" />
 
-        <!--head-->
-        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-            rel="stylesheet">
-        <link href="assets/vendor/boxicons/css/boxicons.min.css"
-            rel="stylesheet">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet">
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-        <!-- Template Main CSS File -->
-        <link href="assets/css/style.css" rel="stylesheet" />
-    </head>
+    <!--head-->
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 
-    <body>
-        <!-- ======= Header ======= -->
-        <header id="header" class="header fixed-top d-flex align-items-center">
-            <div class="d-flex align-items-center justify-content-between">
-                <a href="index.html" class="logo d-flex align-items-center">
-                    <img src="assets/img/logo.png" alt="logo" />
-                    <span class="d-none d-lg-block">Indian</span>
-                </a>
-                <button
-                    class="btn btn-default"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasExample"
-                    aria-controls="offcanvasExample">
-                    <img src="assets/img/menu-icon.png" height="30px"
-                        alt="menu" />
-                </button>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <img src="assets/img/logo.png" alt="logo" />
+                <span class="d-none d-lg-block">Indian</span>
+            </a>
+            <button class="btn btn-default" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample">
+                <img src="assets/img/menu-icon.png" height="30px" alt="menu" />
+            </button>
+        </div>
+        <!-- End Logo -->
+
+        <!-- End Icons Navigation -->
+    </header>
+    <!-- End Header -->
+
+    <main id="main" class="main mt-5">
+        <!-- ======= Sidebar ======= -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title text-info" id="offcanvasExampleLabel">
+                    <b>Menu</b>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <!-- End Logo -->
+            <div class="offcanvas-body">
+                <ul class="sidebar-nav" id="sidebar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-grid"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <!-- End Dashboard Nav -->
 
-            <!-- End Icons Navigation -->
-        </header>
-        <!-- End Header -->
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse"
+                            href="#">
+                            <i class="bi bi-menu-button-wide"></i><span>Components</span><i
+                                class="bi bi-chevron-down ms-auto"></i>
+                        </a>
+                        <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                            <li>
+                                <a href="components-alerts.html">
+                                    <i class="bi bi-circle"></i><span>Alerts</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components-accordion.html">
+                                    <i class="bi bi-circle"></i><span>Accordion</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components-badges.html">
+                                    <i class="bi bi-circle"></i><span>Badges</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components-breadcrumbs.html">
+                                    <i class="bi bi-circle"></i><span>Breadcrumbs</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components-buttons.html">
+                                    <i class="bi bi-circle"></i><span>Buttons</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components-cards.html">
+                                    <i class="bi bi-circle"></i><span>Cards</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components-carousel.html">
+                                    <i class="bi bi-circle"></i><span>Carousel</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components-list-group.html">
+                                    <i class="bi bi-circle"></i><span>List
+                                        group</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components-modal.html">
+                                    <i class="bi bi-circle"></i><span>Modal</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components-tabs.html">
+                                    <i class="bi bi-circle"></i><span>Tabs</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components-pagination.html">
+                                    <i class="bi bi-circle"></i><span>Pagination</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components-progress.html">
+                                    <i class="bi bi-circle"></i><span>Progress</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components-spinners.html">
+                                    <i class="bi bi-circle"></i><span>Spinners</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="components-tooltips.html">
+                                    <i class="bi bi-circle"></i><span>Tooltips</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- End Components Nav -->
 
-        <main id="main" class="main">
-            <!-- ======= Sidebar ======= -->
-            <div
-                class="offcanvas offcanvas-start"
-                tabindex="-1"
-                id="offcanvasExample"
-                aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title text-info"
-                        id="offcanvasExampleLabel">
-                        <b>Menu</b>
-                    </h5>
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="sidebar-nav" id="sidebar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">
-                                <i class="bi bi-grid"></i>
-                                <span>Dashboard</span>
-                            </a>
-                        </li>
-                        <!-- End Dashboard Nav -->
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+                            <i class="bi bi-journal-text"></i><span>Forms</span><i
+                                class="bi bi-chevron-down ms-auto"></i>
+                        </a>
+                        <ul id="forms-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                            <li>
+                                <a href="forms-elements.html">
+                                    <i class="bi bi-circle"></i><span>Form
+                                        Elements</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="forms-layouts.html">
+                                    <i class="bi bi-circle"></i><span>Form
+                                        Layouts</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="forms-editors.html">
+                                    <i class="bi bi-circle"></i><span>Form
+                                        Editors</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="forms-validation.html">
+                                    <i class="bi bi-circle"></i><span>Form
+                                        Validation</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- End Forms Nav -->
 
-                        <li class="nav-item">
-                            <a
-                                class="nav-link collapsed"
-                                data-bs-target="#components-nav"
-                                data-bs-toggle="collapse"
-                                href="#">
-                                <i
-                                    class="bi bi-menu-button-wide"></i><span>Components</span><i
-                                    class="bi bi-chevron-down ms-auto"></i>
-                            </a>
-                            <ul
-                                id="components-nav"
-                                class="nav-content collapse"
-                                data-bs-parent="#sidebar-nav">
-                                <li>
-                                    <a href="components-alerts.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Alerts</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="components-accordion.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Accordion</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="components-badges.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Badges</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="components-breadcrumbs.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Breadcrumbs</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="components-buttons.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Buttons</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="components-cards.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Cards</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="components-carousel.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Carousel</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="components-list-group.html">
-                                        <i class="bi bi-circle"></i><span>List
-                                            group</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="components-modal.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Modal</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="components-tabs.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Tabs</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="components-pagination.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Pagination</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="components-progress.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Progress</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="components-spinners.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Spinners</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="components-tooltips.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Tooltips</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- End Components Nav -->
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+                            <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i
+                                class="bi bi-chevron-down ms-auto"></i>
+                        </a>
+                        <ul id="tables-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                            <li>
+                                <a href="tables-general.html">
+                                    <i class="bi bi-circle"></i><span>General
+                                        Tables</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tables-data.html">
+                                    <i class="bi bi-circle"></i><span>Data
+                                        Tables</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- End Tables Nav -->
 
-                        <li class="nav-item">
-                            <a
-                                class="nav-link collapsed"
-                                data-bs-target="#forms-nav"
-                                data-bs-toggle="collapse"
-                                href="#">
-                                <i
-                                    class="bi bi-journal-text"></i><span>Forms</span><i
-                                    class="bi bi-chevron-down ms-auto"></i>
-                            </a>
-                            <ul
-                                id="forms-nav"
-                                class="nav-content collapse"
-                                data-bs-parent="#sidebar-nav">
-                                <li>
-                                    <a href="forms-elements.html">
-                                        <i class="bi bi-circle"></i><span>Form
-                                            Elements</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="forms-layouts.html">
-                                        <i class="bi bi-circle"></i><span>Form
-                                            Layouts</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="forms-editors.html">
-                                        <i class="bi bi-circle"></i><span>Form
-                                            Editors</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="forms-validation.html">
-                                        <i class="bi bi-circle"></i><span>Form
-                                            Validation</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- End Forms Nav -->
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                            <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
+                        </a>
+                        <ul id="charts-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                            <li>
+                                <a href="charts-chartjs.html">
+                                    <i class="bi bi-circle"></i><span>Chart.js</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="charts-apexcharts.html">
+                                    <i class="bi bi-circle"></i><span>ApexCharts</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="charts-echarts.html">
+                                    <i class="bi bi-circle"></i><span>ECharts</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- End Charts Nav -->
 
-                        <li class="nav-item">
-                            <a
-                                class="nav-link collapsed"
-                                data-bs-target="#tables-nav"
-                                data-bs-toggle="collapse"
-                                href="#">
-                                <i
-                                    class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i
-                                    class="bi bi-chevron-down ms-auto"></i>
-                            </a>
-                            <ul
-                                id="tables-nav"
-                                class="nav-content collapse"
-                                data-bs-parent="#sidebar-nav">
-                                <li>
-                                    <a href="tables-general.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>General
-                                            Tables</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="tables-data.html">
-                                        <i class="bi bi-circle"></i><span>Data
-                                            Tables</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- End Tables Nav -->
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+                            <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
+                        </a>
+                        <ul id="icons-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+                            <li>
+                                <a href="icons-bootstrap.html">
+                                    <i class="bi bi-circle"></i><span>Bootstrap
+                                        Icons</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="icons-remix.html">
+                                    <i class="bi bi-circle"></i><span>Remix
+                                        Icons</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="icons-boxicons.html">
+                                    <i class="bi bi-circle"></i><span>Boxicons</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- End Icons Nav -->
 
-                        <li class="nav-item">
-                            <a
-                                class="nav-link collapsed"
-                                data-bs-target="#charts-nav"
-                                data-bs-toggle="collapse"
-                                href="#">
-                                <i
-                                    class="bi bi-bar-chart"></i><span>Charts</span><i
-                                    class="bi bi-chevron-down ms-auto"></i>
-                            </a>
-                            <ul
-                                id="charts-nav"
-                                class="nav-content collapse"
-                                data-bs-parent="#sidebar-nav">
-                                <li>
-                                    <a href="charts-chartjs.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Chart.js</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="charts-apexcharts.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>ApexCharts</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="charts-echarts.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>ECharts</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- End Charts Nav -->
+                    <li class="nav-heading">Pages</li>
 
-                        <li class="nav-item">
-                            <a
-                                class="nav-link collapsed"
-                                data-bs-target="#icons-nav"
-                                data-bs-toggle="collapse"
-                                href="#">
-                                <i class="bi bi-gem"></i><span>Icons</span><i
-                                    class="bi bi-chevron-down ms-auto"></i>
-                            </a>
-                            <ul
-                                id="icons-nav"
-                                class="nav-content collapse"
-                                data-bs-parent="#sidebar-nav">
-                                <li>
-                                    <a href="icons-bootstrap.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Bootstrap
-                                            Icons</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="icons-remix.html">
-                                        <i class="bi bi-circle"></i><span>Remix
-                                            Icons</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="icons-boxicons.html">
-                                        <i
-                                            class="bi bi-circle"></i><span>Boxicons</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- End Icons Nav -->
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="users-profile.html">
+                            <i class="bi bi-person"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <!-- End Profile Page Nav -->
 
-                        <li class="nav-heading">Pages</li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="pages-faq.html">
+                            <i class="bi bi-question-circle"></i>
+                            <span>F.A.Q</span>
+                        </a>
+                    </li>
+                    <!-- End F.A.Q Page Nav -->
 
-                        <li class="nav-item">
-                            <a class="nav-link collapsed"
-                                href="users-profile.html">
-                                <i class="bi bi-person"></i>
-                                <span>Profile</span>
-                            </a>
-                        </li>
-                        <!-- End Profile Page Nav -->
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="pages-contact.html">
+                            <i class="bi bi-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                    <!-- End Contact Page Nav -->
 
-                        <li class="nav-item">
-                            <a class="nav-link collapsed" href="pages-faq.html">
-                                <i class="bi bi-question-circle"></i>
-                                <span>F.A.Q</span>
-                            </a>
-                        </li>
-                        <!-- End F.A.Q Page Nav -->
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="pages-register.html">
+                            <i class="bi bi-card-list"></i>
+                            <span>Register</span>
+                        </a>
+                    </li>
+                    <!-- End Register Page Nav -->
 
-                        <li class="nav-item">
-                            <a class="nav-link collapsed"
-                                href="pages-contact.html">
-                                <i class="bi bi-envelope"></i>
-                                <span>Contact</span>
-                            </a>
-                        </li>
-                        <!-- End Contact Page Nav -->
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="pages-login.html">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            <span>Login</span>
+                        </a>
+                    </li>
+                    <!-- End Login Page Nav -->
 
-                        <li class="nav-item">
-                            <a class="nav-link collapsed"
-                                href="pages-register.html">
-                                <i class="bi bi-card-list"></i>
-                                <span>Register</span>
-                            </a>
-                        </li>
-                        <!-- End Register Page Nav -->
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="pages-error-404.html">
+                            <i class="bi bi-dash-circle"></i>
+                            <span>Error 404</span>
+                        </a>
+                    </li>
+                    <!-- End Error 404 Page Nav -->
 
-                        <li class="nav-item">
-                            <a class="nav-link collapsed"
-                                href="pages-login.html">
-                                <i class="bi bi-box-arrow-in-right"></i>
-                                <span>Login</span>
-                            </a>
-                        </li>
-                        <!-- End Login Page Nav -->
-
-                        <li class="nav-item">
-                            <a class="nav-link collapsed"
-                                href="pages-error-404.html">
-                                <i class="bi bi-dash-circle"></i>
-                                <span>Error 404</span>
-                            </a>
-                        </li>
-                        <!-- End Error 404 Page Nav -->
-
-                        <li class="nav-item">
-                            <a class="nav-link collapsed"
-                                href="pages-blank.html">
-                                <i class="bi bi-file-earmark"></i>
-                                <span>Blank</span>
-                            </a>
-                        </li>
-                        <!-- End Blank Page Nav -->
-                    </ul>
-                </div>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="pages-blank.html">
+                            <i class="bi bi-file-earmark"></i>
+                            <span>Blank</span>
+                        </a>
+                    </li>
+                    <!-- End Blank Page Nav -->
+                </ul>
             </div>
-            <!-- End Sidebar-->
-            <!-- hero section starts here -->
-            <div class="container mt-5 mb-2">
-                <div class="p-2 text-center bg-body-tertiary rounded-3 justify-content-center">
-                  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        </div>
+        <!-- End Sidebar-->
+        <!-- hero section starts here -->
+        <div class="container" style="margin-top: 65px;">
+            <div class="p-5 text-center bg-secondary rounded-3 justify-content-center">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Library</li>
+                        <li class="breadcrumb-item"><a class="text-dark" href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-dark" href="index.html">Category</a></li>
                     </ol>
-                  </nav>
-                  <h1><i class="bi bi-book"></i></h1>
-                  <h1 class="text-body-emphasis">Result</h1>
-                 
-                </div>
-              </div>
-            <!-- hero section ends here -->
-           
-            <!-- Breaking news section -->
-            <div class="container">
-                <div class="row mb-2">
-                    <div class="col-12 py-2 bg-dark">
-                        <div class="row">
-                            <!-- Breaking box -->
-                            <div class="col-md-3 col-lg-2 pr-md-0">
-                                <div
-                                    class="p-2 bg-primary text-white text-center breaking-caret">
-                                    <span class="fw-bold">Breaking News</span>
+                </nav>
+                <h1 class="text-white"><i class="bi bi-bookmarks"></i></h1>
+                <h1 class="text-white">Results</h1>
+            </div>
+        </div>
+        <!-- hero section ends here -->
+
+        <!-- Breaking news section -->
+        <div class="container mt-1">
+            <div class="row mb-2">
+                <div class="col-12 py-2 bg-dark">
+                    <div class="row">
+                        <!-- Breaking box -->
+                        <div class="col-md-3 col-lg-2 pr-md-0">
+                            <div class="p-2 bg-warning text-white text-center breaking-caret">
+                                <span class="fw-bold">Breaking News</span>
+                            </div>
+                        </div>
+                        <!-- End breaking box -->
+                        <!-- Breaking content -->
+                        <div class="col-md-9 col-lg-10 ps-md-4 py-2">
+                            <div class="breaking-box">
+                                <div id="carouselBreaking" class="carousel slide" data-bs-ride="carousel">
+                                    <!-- Breaking news -->
+                                    <div class="carousel-inner">
+                                        <!-- Post -->
+                                        <div class="carousel-item">
+                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                                <span
+                                                    class="position-relative mx-2 badge bg-primary rounded-0">Technology</span>
+                                            </a>
+                                            <a class="text-white"
+                                                href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Google
+                                                Employees Protest Secret
+                                                Work on Censored Search
+                                                Engine
+                                                for China</a>
+                                        </div>
+                                        <!-- Post -->
+                                        <div class="carousel-item">
+                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                                <span
+                                                    class="position-relative mx-2 badge bg-primary rounded-0">Automotive</span>
+                                            </a>
+                                            <a class="text-white"
+                                                href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Investors
+                                                Betting Against Tesla Made
+                                                $1 Billion on Friday</a>
+                                        </div>
+                                        <!-- Post -->
+                                        <div class="carousel-item">
+                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                                <span
+                                                    class="position-relative mx-2 badge bg-primary rounded-0">Football</span>
+                                            </a>
+                                            <a class="text-white"
+                                                href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">World
+                                                Cup 2050 Will Release in
+                                                Dubai</a>
+                                        </div>
+                                        <!-- Post -->
+                                        <div class="carousel-item">
+                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                                <span
+                                                    class="position-relative mx-2 badge bg-primary rounded-0">Beauty</span>
+                                            </a>
+                                            <a class="text-white"
+                                                href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Lemon
+                                                Makes Your Skin Fresh and
+                                                Glowing</a>
+                                        </div>
+                                        <!-- Post -->
+                                        <div class="carousel-item active">
+                                            <a href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
+                                                <span
+                                                    class="position-relative mx-2 badge bg-primary rounded-0">Sport</span>
+                                            </a>
+                                            <a class="text-white"
+                                                href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">5
+                                                Takeaways From Elon Musk’s
+                                                Interview With The Times
+                                                About Tesla</a>
+                                        </div>
+                                    </div>
+                                    <!-- End breaking news -->
+
+                                    <!-- Navigation slider -->
+                                    <div class="navigation-box p-2 d-none d-sm-block">
+                                        <!-- Nav left -->
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselBreaking" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <!-- Nav right -->
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselBreaking" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <!-- End navigation slider -->
                                 </div>
                             </div>
-                            <!-- End breaking box -->
-                            <!-- Breaking content -->
-                            <div class="col-md-9 col-lg-10 ps-md-4 py-2">
-                                <div class="breaking-box">
-                                    <div id="carouselBreaking"
-                                        class="carousel slide"
-                                        data-bs-ride="carousel">
-                                        <!-- Breaking news -->
-                                        <div class="carousel-inner">
-                                            <!-- Post -->
-                                            <div class="carousel-item">
-                                                <a
-                                                    href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                    <span
-                                                        class="position-relative mx-2 badge bg-primary rounded-0">Technology</span>
-                                                </a>
-                                                <a class="text-white"
-                                                    href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Google
-                                                    Employees Protest Secret
-                                                    Work on Censored Search
-                                                    Engine
-                                                    for China</a>
-                                            </div>
-                                            <!-- Post -->
-                                            <div class="carousel-item">
-                                                <a
-                                                    href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                    <span
-                                                        class="position-relative mx-2 badge bg-primary rounded-0">Automotive</span>
-                                                </a>
-                                                <a class="text-white"
-                                                    href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Investors
-                                                    Betting Against Tesla Made
-                                                    $1 Billion on Friday</a>
-                                            </div>
-                                            <!-- Post -->
-                                            <div class="carousel-item">
-                                                <a
-                                                    href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                    <span
-                                                        class="position-relative mx-2 badge bg-primary rounded-0">Football</span>
-                                                </a>
-                                                <a class="text-white"
-                                                    href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">World
-                                                    Cup 2050 Will Release in
-                                                    Dubai</a>
-                                            </div>
-                                            <!-- Post -->
-                                            <div class="carousel-item">
-                                                <a
-                                                    href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                    <span
-                                                        class="position-relative mx-2 badge bg-primary rounded-0">Beauty</span>
-                                                </a>
-                                                <a class="text-white"
-                                                    href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">Lemon
-                                                    Makes Your Skin Fresh and
-                                                    Glowing</a>
-                                            </div>
-                                            <!-- Post -->
-                                            <div class="carousel-item active">
-                                                <a
-                                                    href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">
-                                                    <span
-                                                        class="position-relative mx-2 badge bg-primary rounded-0">Sport</span>
-                                                </a>
-                                                <a class="text-white"
-                                                    href="https://bootstrap.news/bootstrap-4-template-news-portal-magazine/">5
-                                                    Takeaways From Elon Musk’s
-                                                    Interview With The Times
-                                                    About Tesla</a>
-                                            </div>
-                                        </div>
-                                        <!-- End breaking news -->
+                        </div>
+                        <!-- End breaking content -->
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                                        <!-- Navigation slider -->
-                                        <div
-                                            class="navigation-box p-2 d-none d-sm-block">
-                                            <!-- Nav left -->
-                                            <button
-                                                class="carousel-control-prev"
-                                                type="button"
-                                                data-bs-target="#carouselBreaking"
-                                                data-bs-slide="prev">
-                                                <span
-                                                    class="carousel-control-prev-icon"
-                                                    aria-hidden="true"></span>
-                                                <span
-                                                    class="visually-hidden">Previous</span>
-                                            </button>
-                                            <!-- Nav right -->
-                                            <button
-                                                class="carousel-control-next"
-                                                type="button"
-                                                data-bs-target="#carouselBreaking"
-                                                data-bs-slide="next">
-                                                <span
-                                                    class="carousel-control-next-icon"
-                                                    aria-hidden="true"></span>
-                                                <span
-                                                    class="visually-hidden">Next</span>
-                                            </button>
-                                        </div>
-                                        <!-- End navigation slider -->
+        <section id="recents">
+            <div class="container">
+                <div class="row g-2 g-xxl-5">
+                    <div class="col-lg-8" id="jobs">
+                        <div class="card h-100">
+                            <div class="card-header bg-success">
+                                <div class="text-white fw-500 text-center">
+                                    <b>Recent Results </b>
+                                </div>
+                            </div>
+                            <div class="list-group list-group-flush small mb-0 border-bottom">
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Introducing Start Bootstrap Forms
+                                    <div class="text-xs text-muted">July 9, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Free Bootstrap Themes - 2021 Update
+                                    <div class="text-xs text-muted">June 27, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Free Bootstrap Themes - 2021 Update
+                                    <div class="text-xs text-muted">June 27, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Bootstrap 5 Templates and Themes Update for Start Bootstrap
+                                    <div class="text-xs text-muted">May 21, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Is Bootstrap Relevant in 2021?
+                                    <div class="text-xs text-muted">May 21, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Introducing Angular Bootstrap Themes and Templates
+                                    <div class="text-xs text-muted">April 9, 2020</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Free Bootstrap Themes - 2021 Update
+                                    <div class="text-xs text-muted">June 27, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Bootstrap 5 Templates and Themes Update for Start Bootstrap
+                                    <div class="text-xs text-muted">May 21, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Is Bootstrap Relevant in 2021?
+                                    <div class="text-xs text-muted">May 21, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Introducing Angular Bootstrap Themes and Templates
+                                    <div class="text-xs text-muted">April 9, 2020</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Free Bootstrap Themes - 2021 Update
+                                    <div class="text-xs text-muted">June 27, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Bootstrap 5 Templates and Themes Update for Start Bootstrap
+                                    <div class="text-xs text-muted">May 21, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Is Bootstrap Relevant in 2021?
+                                    <div class="text-xs text-muted">May 21, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Introducing Angular Bootstrap Themes and Templates
+                                    <div class="text-xs text-muted">April 9, 2020</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Introducing Start Bootstrap Forms
+                                    <div class="text-xs text-muted">July 9, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Free Bootstrap Themes - 2021 Update
+                                    <div class="text-xs text-muted">June 27, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Bootstrap 5 Templates and Themes Update for Start Bootstrap
+                                    <div class="text-xs text-muted">May 21, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Is Bootstrap Relevant in 2021?
+                                    <div class="text-xs text-muted">May 21, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Introducing Angular Bootstrap Themes and Templates
+                                    <div class="text-xs text-muted">April 9, 2020</div>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-center text-center mt-2">
+                                <div class="btn-toolbar justify-content-between" role="toolbar"
+                                    aria-label="Toolbar with button groups">
+                                    <div class="btn-group" role="group" aria-label="First group">
+                                        <button type="button" class="btn btn-outline-secondary">Prev</button>
+                                        <button type="button" class="btn btn-outline-secondary">1</button>
+                                        <button type="button" class="btn btn-outline-secondary">2</button>
+                                        <button type="button" class="btn btn-outline-secondary">3</button>
+                                        <button type="button" class="btn btn-outline-secondary">4</button>
+                                        <button type="button" class="btn btn-outline-secondary">Next</button>
                                     </div>
                                 </div>
                             </div>
-                            <!-- End breaking content -->
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <section id="recents">
-                <div class="container">
-                  <div class="row g-2 g-xxl-5">
-                    <div class="col-lg-8" id="jobs">
-                      <div class="card h-100">
-                        <div class="card-header bg-primary">
-                          <div class="text-white fw-500 text-center">
-                            <b>Recent Results </b>
-                          </div>
-                        </div>
-                        <div
-                          class="list-group list-group-flush small mb-0 border-bottom">
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Introducing Start Bootstrap Forms
-                            <div class="text-xs text-muted">July 9, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Free Bootstrap Themes - 2021 Update
-                            <div class="text-xs text-muted">June 27, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Free Bootstrap Themes - 2021 Update
-                            <div class="text-xs text-muted">June 27, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Bootstrap 5 Templates and Themes Update for Start Bootstrap
-                            <div class="text-xs text-muted">May 21, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Is Bootstrap Relevant in 2021?
-                            <div class="text-xs text-muted">May 21, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Introducing Angular Bootstrap Themes and Templates
-                            <div class="text-xs text-muted">April 9, 2020</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Free Bootstrap Themes - 2021 Update
-                            <div class="text-xs text-muted">June 27, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Bootstrap 5 Templates and Themes Update for Start Bootstrap
-                            <div class="text-xs text-muted">May 21, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Is Bootstrap Relevant in 2021?
-                            <div class="text-xs text-muted">May 21, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Introducing Angular Bootstrap Themes and Templates
-                            <div class="text-xs text-muted">April 9, 2020</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Free Bootstrap Themes - 2021 Update
-                            <div class="text-xs text-muted">June 27, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Bootstrap 5 Templates and Themes Update for Start Bootstrap
-                            <div class="text-xs text-muted">May 21, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Is Bootstrap Relevant in 2021?
-                            <div class="text-xs text-muted">May 21, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Introducing Angular Bootstrap Themes and Templates
-                            <div class="text-xs text-muted">April 9, 2020</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Introducing Start Bootstrap Forms
-                            <div class="text-xs text-muted">July 9, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Free Bootstrap Themes - 2021 Update
-                            <div class="text-xs text-muted">June 27, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Bootstrap 5 Templates and Themes Update for Start Bootstrap
-                            <div class="text-xs text-muted">May 21, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Is Bootstrap Relevant in 2021?
-                            <div class="text-xs text-muted">May 21, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Introducing Angular Bootstrap Themes and Templates
-                            <div class="text-xs text-muted">April 9, 2020</div>
-                          </a>
-                        </div>
-                        <div class="d-flex justify-content-center text-center mt-2">
-                            <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
-                                <div class="btn-group" role="group" aria-label="First group">
-                                  <button type="button" class="btn btn-outline-secondary">Prev</button>
-                                  <button type="button" class="btn btn-outline-secondary">1</button>
-                                  <button type="button" class="btn btn-outline-secondary">2</button>
-                                  <button type="button" class="btn btn-outline-secondary">3</button>
-                                  <button type="button" class="btn btn-outline-secondary">4</button>
-                                  <button type="button" class="btn btn-outline-secondary">Next</button>
-                                </div>
-                              </div>
-                        </div>
-                      </div>
                     </div>
                     <div class="col-lg-4" id="exams">
                         <div class="card h-50 mb-2">
-                            <div class="card-header bg-primary">
-                              <div class="text-white fw-500 text-center">
-                                <i class="bi bi-newspaper"></i> <b>News</b>
-                              </div>
-                            </div>
-                            <div id="news-list">
-                              <div
-                                class="list-group list-group-flush small mb-0 border-bottom">
-            
-                                <a
-                                  class="list-group-item list-group-item-action text-danger"
-                                  href="#">
-                                  Free Bootstrap Themes - 2021 Update
-                                  <div class="text-xs text-muted">June 27, 2021</div>
-                                </a>
-                                <a class="list-group-item list-group-item-action" href="#">
-                                  Bootstrap 5 Templates and Themes Update for Start
-                                  Bootstrap
-                                  <div class="text-xs text-muted">May 21, 2021</div>
-                                </a>
-                                <a class="list-group-item list-group-item-action" href="#">
-                                  Is Bootstrap Relevant in 2021?
-                                  <div class="text-xs text-muted">May 21, 2021</div>
-                                </a>
-                                <a class="list-group-item list-group-item-action" href="#">
-                                  Introducing Angular Bootstrap Themes and Templates
-                                  <div class="text-xs text-muted">April 9, 2020</div>
-                                </a>
-                                <a class="list-group-item list-group-item-action" href="#">
-                                  Bootstrap 5 Templates and Themes Update for Start
-                                  Bootstrap
-                                  <div class="text-xs text-muted">May 21, 2021</div>
-                                </a>
-                                <a class="list-group-item list-group-item-action" href="#">
-                                  Is Bootstrap Relevant in 2021?
-                                  <div class="text-xs text-muted">May 21, 2021</div>
-                                </a>
-                                <a class="list-group-item list-group-item-action" href="#">
-                                  Introducing Angular Bootstrap Themes and Templates
-                                  <div class="text-xs text-muted">April 9, 2020</div>
-                                </a>
-                                <a
-                                  class="list-group-item list-group-item-action text-danger"
-                                  href="#">
-                                  Free Bootstrap Themes - 2021 Update
-                                  <div class="text-xs text-muted">June 27, 2021</div>
-                                </a>
-                                <a class="list-group-item list-group-item-action" href="#">
-                                  Bootstrap 5 Templates and Themes Update for Start
-                                  Bootstrap
-                                  <div class="text-xs text-muted">May 21, 2021</div>
-                                </a>
-                                <a class="list-group-item list-group-item-action" href="#">
-                                  Is Bootstrap Relevant in 2021?
-                                  <div class="text-xs text-muted">May 21, 2021</div>
-                                </a>
-                                <a class="list-group-item list-group-item-action" href="#">
-                                  Introducing Angular Bootstrap Themes and Templates
-                                  <div class="text-xs text-muted">April 9, 2020</div>
-                                </a>
-                                <a class="list-group-item list-group-item-action" href="#">
-                                  Bootstrap 5 Templates and Themes Update for Start
-                                  Bootstrap
-                                  <div class="text-xs text-muted">May 21, 2021</div>
-                                </a>
-                                <a class="list-group-item list-group-item-action" href="#">
-                                  Is Bootstrap Relevant in 2021?
-                                  <div class="text-xs text-muted">May 21, 2021</div>
-                                </a>
-                                <a class="list-group-item list-group-item-action" href="#">
-                                  Introducing Angular Bootstrap Themes and Templates
-                                  <div class="text-xs text-muted">April 9, 2020</div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="d-flex justify-content-center p-2">
-                              <button id="up" type="button"><i
-                                  class="bi bi-arrow-up-circle"></i></button>
-                              <button id="down" type="button"><i
-                                  class="bi bi-arrow-down-circle"></i></button>
-                            </div>
-                          </div>
-                      <div class="card h-45">
-                        <div class="card-header bg-primary">
-                          <div class="text-white fw-500 text-center">
-                            <b>Recent Exam</b>
-                          </div>
-                        </div>
-                        <div
-                          class="list-group list-group-flush small mb-0 border-bottom">
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Introducing Start Bootstrap Forms
-                            <div class="text-xs text-muted">July 9, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Introducing Start Bootstrap Forms
-                            <div class="text-xs text-muted">July 9, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Introducing Start Bootstrap Forms
-                            <div class="text-xs text-muted">July 9, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Free Bootstrap Themes - 2021 Update
-                            <div class="text-xs text-muted">June 27, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Free Bootstrap Themes - 2021 Update
-                            <div class="text-xs text-muted">June 27, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Bootstrap 5 Templates and Themes Update for Start Bootstrap
-                            <div class="text-xs text-muted">May 21, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Is Bootstrap Relevant in 2021?
-                            <div class="text-xs text-muted">May 21, 2021</div>
-                          </a>
-                          <a class="list-group-item list-group-item-action" href="#">
-                            Introducing Angular Bootstrap Themes and Templates
-                            <div class="text-xs text-muted">April 9, 2020</div>
-                          </a>
-                        </div>
-                        <div class="text-center m-2">
-                          <a href="#">
-                            <b class="btn btn-outline-info px-5">View More</b>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    
-                  </div>
-                </div>
-              </section>
-
-        </main>
-        <!-- End #main -->
-        <hr />
-        <!-- Footer -->
-        <footer class="bg-body-tertiary text-center">
-            <!-- Grid container -->
-            <div class="container p-4">
-                <!-- Section: Social media -->
-                <section class="mb-4">
-                    <!-- Facebook -->
-                    <a
-                        data-mdb-ripple-init
-                        class="btn btn-outline btn-floating m-1"
-                        href="#!"
-                        role="button"><img
-                            class="rounded"
-                            src="assets/img/facebook-3-logo-svgrepo-com.png"
-                            height="30px"
-                            alt /></a>
-
-                    <!-- Google -->
-                    <a
-                        data-mdb-ripple-init
-                        class="btn btn-outline btn-floating m-1"
-                        href="#!"
-                        role="button"><img
-                            class="rounded"
-                            src="assets/img/google-color-svgrepo-com.png"
-                            height="30px"
-                            alt /></a>
-
-                    <!-- Instagram -->
-                    <a
-                        data-mdb-ripple-init
-                        class="btn btn-outline btn-floating m-1"
-                        href="#!"
-                        role="button"><img
-                            class="rounded"
-                            src="assets/img/instagram-2-1-logo-svgrepo-com.png"
-                            height="30px"
-                            alt /></a>
-
-                    <!-- Linkedin -->
-                    <a
-                        data-mdb-ripple-init
-                        class="btn btn-outline btn-floating m-1"
-                        href="#!"
-                        role="button"><img
-                            class="rounded"
-                            src="assets/img/linkedin-icon-2-logo-svgrepo-com.png"
-                            height="30px"
-                            alt /></a>
-
-                    <!-- Github -->
-                    <a
-                        data-mdb-ripple-init
-                        class="btn btn-outline btn-floating m-1"
-                        href="#!"
-                        role="button"><img
-                            class="rounded"
-                            src="assets/img/github-color-svgrepo-com.png"
-                            height="30px"
-                            alt /></a>
-                </section>
-                <!-- Section: Social media -->
-
-                <!-- Section: Form -->
-                <section class>
-                    <form action>
-                        <!--Grid row-->
-                        <div class="row d-flex justify-content-center">
-                            <!--Grid column-->
-                            <div class="col-auto">
-                                <p class="pt-2">
-                                    <strong>Sign up for our newsletter</strong>
-                                </p>
-                            </div>
-                            <!--Grid column-->
-
-                            <!--Grid column-->
-                            <div class="col-md-5 col-12">
-                                <!-- Email input -->
-                                <div data-mdb-input-init
-                                    class="form-outline mb-4">
-                                    <input
-                                        type="email"
-                                        id="form5Example24"
-                                        class="form-control"
-                                        placeholder="Enter Email"
-                                        required />
+                            <div class="card-header bg-success">
+                                <div class="text-white fw-500 text-center">
+                                    <i class="bi bi-newspaper"></i> <b>News</b>
                                 </div>
                             </div>
-                            <!--Grid column-->
+                            <div id="news-list">
+                                <div class="list-group list-group-flush small mb-0 border-bottom">
 
-                            <!--Grid column-->
-                            <div class="col-auto">
-                                <!-- Submit button -->
-                                <button
-                                    data-mdb-ripple-init
-                                    type="submit"
-                                    class="btn btn-primary mb-4">
-                                    Subscribe
-                                </button>
+                                    <a class="list-group-item list-group-item-action text-danger" href="#">
+                                        Free Bootstrap Themes - 2021 Update
+                                        <div class="text-xs text-muted">June 27, 2021</div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action" href="#">
+                                        Bootstrap 5 Templates and Themes Update for Start
+                                        Bootstrap
+                                        <div class="text-xs text-muted">May 21, 2021</div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action" href="#">
+                                        Is Bootstrap Relevant in 2021?
+                                        <div class="text-xs text-muted">May 21, 2021</div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action" href="#">
+                                        Introducing Angular Bootstrap Themes and Templates
+                                        <div class="text-xs text-muted">April 9, 2020</div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action" href="#">
+                                        Bootstrap 5 Templates and Themes Update for Start
+                                        Bootstrap
+                                        <div class="text-xs text-muted">May 21, 2021</div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action" href="#">
+                                        Is Bootstrap Relevant in 2021?
+                                        <div class="text-xs text-muted">May 21, 2021</div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action" href="#">
+                                        Introducing Angular Bootstrap Themes and Templates
+                                        <div class="text-xs text-muted">April 9, 2020</div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action text-danger" href="#">
+                                        Free Bootstrap Themes - 2021 Update
+                                        <div class="text-xs text-muted">June 27, 2021</div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action" href="#">
+                                        Bootstrap 5 Templates and Themes Update for Start
+                                        Bootstrap
+                                        <div class="text-xs text-muted">May 21, 2021</div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action" href="#">
+                                        Is Bootstrap Relevant in 2021?
+                                        <div class="text-xs text-muted">May 21, 2021</div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action" href="#">
+                                        Introducing Angular Bootstrap Themes and Templates
+                                        <div class="text-xs text-muted">April 9, 2020</div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action" href="#">
+                                        Bootstrap 5 Templates and Themes Update for Start
+                                        Bootstrap
+                                        <div class="text-xs text-muted">May 21, 2021</div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action" href="#">
+                                        Is Bootstrap Relevant in 2021?
+                                        <div class="text-xs text-muted">May 21, 2021</div>
+                                    </a>
+                                    <a class="list-group-item list-group-item-action" href="#">
+                                        Introducing Angular Bootstrap Themes and Templates
+                                        <div class="text-xs text-muted">April 9, 2020</div>
+                                    </a>
+                                </div>
                             </div>
-                            <!--Grid column-->
+                            <div class="d-flex justify-content-center p-2">
+                                <button id="up" type="button"><i class="bi bi-arrow-up-circle"></i></button>
+                                <button id="down" type="button"><i class="bi bi-arrow-down-circle"></i></button>
+                            </div>
                         </div>
-                        <!--Grid row-->
-                    </form>
-                </section>
-                <!-- Section: Form -->
+                        <div class="card h-45">
+                            <div class="card-header bg-success">
+                                <div class="text-white fw-500 text-center">
+                                    <b>Recent Exam</b>
+                                </div>
+                            </div>
+                            <div class="list-group list-group-flush small mb-0 border-bottom">
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Introducing Start Bootstrap Forms
+                                    <div class="text-xs text-muted">July 9, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Introducing Start Bootstrap Forms
+                                    <div class="text-xs text-muted">July 9, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Introducing Start Bootstrap Forms
+                                    <div class="text-xs text-muted">July 9, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Free Bootstrap Themes - 2021 Update
+                                    <div class="text-xs text-muted">June 27, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Free Bootstrap Themes - 2021 Update
+                                    <div class="text-xs text-muted">June 27, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Bootstrap 5 Templates and Themes Update for Start Bootstrap
+                                    <div class="text-xs text-muted">May 21, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Is Bootstrap Relevant in 2021?
+                                    <div class="text-xs text-muted">May 21, 2021</div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="#">
+                                    Introducing Angular Bootstrap Themes and Templates
+                                    <div class="text-xs text-muted">April 9, 2020</div>
+                                </a>
+                            </div>
+                            <div class="text-center m-2">
+                                <a href="#">
+                                    <b class="btn btn-outline-info px-5">View More</b>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <!-- Grid container -->
+        </section>
 
-            <!-- Copyright -->
-            <div
-                class="text-center p-3"
-                style="background-color: rgba(0, 0, 0, 0.05)">
-                © 2020 Copyright:
-                <a class="text-reset fw-bold"
-                    href="https://mdbootstrap.com/">MDBootstrap.com</a>
-            </div>
-            <!-- Copyright -->
-        </footer>
-        <!-- Footer -->
+    </main>
+    <!-- End #main -->
+    <hr />
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><img
+                        class="rounded" src="assets/img/facebook-3-logo-svgrepo-com.png" height="30px" alt /></a>
 
-        <a
-            href="#"
-            class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-circle"></i></i></a>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="assets/js/jquery.easy-ticker.js"></script>
-        <script>
-    $(document).ready(function () {
-  var lastScrollTop = 0;
-  var header = $("#header");
+                <!-- Google -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><img
+                        class="rounded" src="assets/img/google-color-svgrepo-com.png" height="30px" alt /></a>
 
-  $(window).scroll(function () {
-    var currentScroll = $(this).scrollTop();
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><img
+                        class="rounded" src="assets/img/instagram-2-1-logo-svgrepo-com.png" height="30px" alt /></a>
 
-    if (currentScroll > lastScrollTop) {
-      // Scrolling down
-      header.removeClass("d-block").addClass("d-none");
-    } else {
-      // Scrolling up
-      header.removeClass("d-none").addClass("d-block");
-    }
+                <!-- Linkedin -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><img
+                        class="rounded" src="assets/img/linkedin-icon-2-logo-svgrepo-com.png" height="30px" alt /></a>
 
-    lastScrollTop = currentScroll;
-  });
-});
-// function to auto scroll news
-$(document).ready(function () {
-  $("#news-list").easyTicker({
-    direction: "up",
-    easing: "swing",
-    speed: "slow",
-    interval: 1000,
-    height: "500px",
-    visible: 0,
-    mousePause: true,
-    controls: {
-      up: "#up",
-      down: "#down",
-      toggle: "#toggle",
-      playText: "",
-      stopText: "",
-    },
-    callbacks: {
-      before: false,
-      after: false,
-    },
-  });
-});
-   </script>
-    </body>
+                <!-- Github -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"><img
+                        class="rounded" src="assets/img/github-color-svgrepo-com.png" height="30px" alt /></a>
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Form -->
+            <section class>
+                <form action>
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Sign up for our newsletter</strong>
+                            </p>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <input type="email" id="form5Example24" class="form-control" placeholder="Enter Email"
+                                    required />
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button data-mdb-ripple-init type="submit" class="btn btn-primary mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </form>
+            </section>
+            <!-- Section: Form -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05)">
+            © 2020 Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-circle"></i></i></a>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery.easy-ticker.js"></script>
+    <script>
+        $(document).ready(function () {
+            var lastScrollTop = 0;
+            var header = $("#header");
+
+            $(window).scroll(function () {
+                var currentScroll = $(this).scrollTop();
+
+                if (currentScroll > lastScrollTop) {
+                    // Scrolling down
+                    header.removeClass("d-block").addClass("d-none");
+                } else {
+                    // Scrolling up
+                    header.removeClass("d-none").addClass("d-block");
+                }
+
+                lastScrollTop = currentScroll;
+            });
+        });
+        // function to auto scroll news
+        $(document).ready(function () {
+            $("#news-list").easyTicker({
+                direction: "up",
+                easing: "swing",
+                speed: "slow",
+                interval: 1000,
+                height: "500px",
+                visible: 0,
+                mousePause: true,
+                controls: {
+                    up: "#up",
+                    down: "#down",
+                    toggle: "#toggle",
+                    playText: "",
+                    stopText: "",
+                },
+                callbacks: {
+                    before: false,
+                    after: false,
+                },
+            });
+        });
+    </script>
+</body>
+
 </html>
