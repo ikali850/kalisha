@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>All-posts - Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <!-- iziToast CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- iziToast JS -->
+    <script src="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="index.html">
+            <img src="img/logo.png" alt="logo" height="50px">
+        </a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Settings</a></li>
+                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="log-in.html">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Dashboard
+                        </a>
+                        <!-- Blog Posts Section -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePosts" aria-expanded="false" aria-controls="collapsePosts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-pencil-alt"></i></div>
+                            Blog Posts
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapsePosts" aria-labelledby="headingPosts" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="manage-post.html">Manage Post</a>
+                                <a class="nav-link" href="#">Add New Post</a>
+                                <a class="nav-link" href="#">Edit Post</a>
+                            </nav>
+                        </div>
+                        <!-- Sarkari Blog Posts Section -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse-gov-posts" aria-expanded="false" aria-controls="collapsePosts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-pencil-alt"></i></div>
+                            Application Post
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapse-gov-posts" aria-labelledby="headingPosts" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="manage-application-post.html">Manage Application Posts</a>
+                                <a class="nav-link" href="#">Add New Post</a>
+                                <a class="nav-link" href="#">Edit Post</a>
+                            </nav>
+                        </div>
+                        <!-- Categories Section -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCategories" aria-expanded="false" aria-controls="collapseCategories">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tags"></i></div>
+                            Categories
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseCategories" aria-labelledby="headingCategories" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="manage-category.html">Manage Categories</a>
+                                <a class="nav-link" href="#">Add New Category</a>
+                                <a class="nav-link" href="#">Edit Category</a>
+                            </nav>
+                        </div>
+                        <!-- Draft Section -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseDraft" aria-expanded="false" aria-controls="collapseDraft">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tags"></i></div>
+                            Draft
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseDraft" aria-labelledby="headingDraft" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="#">Draft Data</a>
+                            </nav>
+                        </div>
+                        <!-- User Management Section -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseUsers" aria-expanded="false" aria-controls="collapseUsers">
+                            <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                            Users
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseUsers" aria-labelledby="headingUsers" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="user-managment.html">Manage Users</a>
+                                <a class="nav-link" href="#">Add New User</a>
+                                <a class="nav-link" href="#">Edit User</a>
+                                <a class="nav-link" href="#">Roles & Permissions</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Logged in as:</div>
+                    Arvind kumar
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <h2 class="mt-4 pb-2" style="border-bottom: 2px solid;">Manage Blog Post</h2>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active">All-Posts</li>
+                    </ol>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-table me-1"></i>
+                            All Post <button type="button" class="btn btn-outline-primary" style="margin-left: 80%;" data-bs-toggle="modal" data-bs-target="#addPostModal"><i class="fa-solid fa-plus"></i> New Post </button>
+                        </div>
+                        <div class="card-body">
+                            <table id="post-data" class="table table-bordered table-hover table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th title="Field #1">ID</th>
+                                        <th title="Field #2">Name</th>
+                                        <th title="Field #3">Position</th>
+                                        <th title="Field #4">Office</th>
+                                        <th title="Field #5">Age</th>
+                                        <th title="Field #6">Start date</th>
+                                        <th title="Field #7">Salary</th>
+                                        <th title="Field #8">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="right">1</td>
+                                        <td>Tiger Nixon</td>
+                                        <td>System Architect</td>
+                                        <td>Edinburgh</td>
+                                        <td align="right">61</td>
+                                        <td>2011/04/25</td>
+                                        <td>$320,800</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">2</td>
+                                        <td>Garrett Winters</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td align="right">63</td>
+                                        <td>2011/07/25</td>
+                                        <td>$170,750</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">3</td>
+                                        <td>Ashton Cox</td>
+                                        <td>Junior Technical Author</td>
+                                        <td>San Francisco</td>
+                                        <td align="right">66</td>
+                                        <td>2009/01/12</td>
+                                        <td>$86,000</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">4</td>
+                                        <td>Cedric Kelly</td>
+                                        <td>Senior Javascript Developer</td>
+                                        <td>Edinburgh</td>
+                                        <td align="right">22</td>
+                                        <td>2012/03/29</td>
+                                        <td>$433,060</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">5</td>
+                                        <td>Airi Satou</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td align="right">33</td>
+                                        <td>2008/11/28</td>
+                                        <td>$162,700</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">6</td>
+                                        <td>Brielle Williamson</td>
+                                        <td>Integration Specialist</td>
+                                        <td>New York</td>
+                                        <td align="right">61</td>
+                                        <td>2012/12/02</td>
+                                        <td>$372,000</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">7</td>
+                                        <td>Herrod Chandler</td>
+                                        <td>Sales Assistant</td>
+                                        <td>San Francisco</td>
+                                        <td align="right">59</td>
+                                        <td>2012/08/06</td>
+                                        <td>$137,500</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">8</td>
+                                        <td>Rhona Davidson</td>
+                                        <td>Integration Specialist</td>
+                                        <td>Tokyo</td>
+                                        <td align="right">55</td>
+                                        <td>2010/10/14</td>
+                                        <td>$327,900</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">9</td>
+                                        <td>Colleen Hurst</td>
+                                        <td>Javascript Developer</td>
+                                        <td>San Francisco</td>
+                                        <td align="right">39</td>
+                                        <td>2009/09/15</td>
+                                        <td>$205,500</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">10</td>
+                                        <td>Sonya Frost</td>
+                                        <td>Software Engineer</td>
+                                        <td>Edinburgh</td>
+                                        <td align="right">23</td>
+                                        <td>2008/12/13</td>
+                                        <td>$103,600</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">11</td>
+                                        <td>Jena Gaines</td>
+                                        <td>Office Manager</td>
+                                        <td>London</td>
+                                        <td align="right">30</td>
+                                        <td>2008/12/19</td>
+                                        <td>$90,560</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">12</td>
+                                        <td>Quinn Flynn</td>
+                                        <td>Support Lead</td>
+                                        <td>Edinburgh</td>
+                                        <td align="right">22</td>
+                                        <td>2013/03/03</td>
+                                        <td>$342,000</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">13</td>
+                                        <td>Charde Marshall</td>
+                                        <td>Regional Director</td>
+                                        <td>San Francisco</td>
+                                        <td align="right">36</td>
+                                        <td>2008/10/16</td>
+                                        <td>$470,600</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">14</td>
+                                        <td>Haley Kennedy</td>
+                                        <td>Senior Marketing Designer</td>
+                                        <td>London</td>
+                                        <td align="right">43</td>
+                                        <td>2012/12/18</td>
+                                        <td>$313,500</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">15</td>
+                                        <td>Tatyana Fitzpatrick</td>
+                                        <td>Regional Director</td>
+                                        <td>London</td>
+                                        <td align="right">19</td>
+                                        <td>2010/03/17</td>
+                                        <td>$385,750</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">16</td>
+                                        <td>Michael Silva</td>
+                                        <td>Marketing Designer</td>
+                                        <td>London</td>
+                                        <td align="right">66</td>
+                                        <td>2012/11/27</td>
+                                        <td>$198,500</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">17</td>
+                                        <td>Paul Byrd</td>
+                                        <td>Chief Financial Officer (CFO)</td>
+                                        <td>New York</td>
+                                        <td align="right">64</td>
+                                        <td>2010/06/09</td>
+                                        <td>$725,000</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">18</td>
+                                        <td>Gloria Little</td>
+                                        <td>Systems Administrator</td>
+                                        <td>New York</td>
+                                        <td align="right">59</td>
+                                        <td>2009/04/10</td>
+                                        <td>$237,500</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">19</td>
+                                        <td>Bradley Greer</td>
+                                        <td>Software Engineer</td>
+                                        <td>London</td>
+                                        <td align="right">41</td>
+                                        <td>2012/10/13</td>
+                                        <td>$132,000</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">20</td>
+                                        <td>Dai Rios</td>
+                                        <td>Personnel Lead</td>
+                                        <td>Edinburgh</td>
+                                        <td align="right">35</td>
+                                        <td>2012/09/26</td>
+                                        <td>$217,500</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">21</td>
+                                        <td>Jenette Caldwell</td>
+                                        <td>Development Lead</td>
+                                        <td>New York</td>
+                                        <td align="right">30</td>
+                                        <td>2011/09/03</td>
+                                        <td>$345,000</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">22</td>
+                                        <td>Yuri Berry</td>
+                                        <td>Chief Marketing Officer (CMO)</td>
+                                        <td>New York</td>
+                                        <td align="right">40</td>
+                                        <td>2009/06/25</td>
+                                        <td>$675,000</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">23</td>
+                                        <td>Caesar Vance</td>
+                                        <td>Pre-Sales Support</td>
+                                        <td>New York</td>
+                                        <td align="right">21</td>
+                                        <td>2011/12/12</td>
+                                        <td>$106,450</td>
+                                        <td><a class="btn btn-warning m-1" href="#" role="button"><i class="bi bi-eye"></i></a>
+                                            <a class="btn btn-primary m-1 editBtn" href="#1" role="button"><i class="bi bi-pencil"></i></a>
+                                            <a class="btn btn-info m-1 pblsBtn" href="#1" role="button"><i class="bi bi-browser-chrome"></i> Publish</a>
+                                            <a class="btn btn-danger m-1 delBtn" href="#" role="button"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Modal for add new post -->
+                    <div class="modal fade" id="addPostModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Post</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="accordion mb-4" id="accordionExample">
+                                        <!-- Basic Info Accordion -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingOne">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                    <b>Basic Info</b>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <form action="#!" method="post">
+                                                        <div class="mb-3">
+                                                            <div class="form-floating">
+                                                                <input type="text" class="form-control" id="title" name="title" placeholder="Title" required>
+                                                                <label for="title">Title</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <div class="form-floating">
+                                                                <input type="text" class="form-control" id="url-slug" name="url-slug" placeholder="URL Slug">
+                                                                <label for="url-slug">URL Slug</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <div class="form-floating">
+                                                                <select class="form-select" id="category-select" aria-label="Floating label select example" required>
+                                                                    <option selected>Category</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                                <label for="category-select">Select One Category</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <div class="form-floating">
+                                                                <input type="text" class="form-control" id="author" name="author" placeholder="Author">
+                                                                <label for="author">Author</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <div class="form-floating">
+                                                                <input type="text" class="form-control" id="like" name="like" placeholder="Like">
+                                                                <label for="like">Like</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <div class="form-floating">
+                                                                <input type="text" class="form-control" id="views" name="views" placeholder="Views">
+                                                                <label for="views">Views</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <div class="form-floating">
+                                                                <input type="date" class="form-control" id="date" name="date" placeholder="Date">
+                                                                <label for="date">Date</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-end mt-4">
+                                                            <button type="submit" class="btn btn-primary">Save</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Application Dates Item 3 -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingThree">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    <b>Blog Content</b>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <div class="mb-3">
+                                                        <div class="form-floating">
+                                                            <textarea class="form-control" id="contentData" name="content" placeholder="Content" style="height: 200px;"></textarea>
+                                                            <label for="content">Content</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-end mt-4">
+                                                        <button type="button" id="previewButton" class="btn btn-secondary me-2">Preview</button>
+                                                        <button type="button" class="btn btn-primary">Save</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Preview Modal -->
+                    <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-fullscreen">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Preview</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" id="previewContainer">
+                                    ...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/post.js"></script>
+    <script type="text/javascript">
+    // Toggle the side navigation
+    const sidebarToggle = document.body.querySelector("#sidebarToggle");
+    if (sidebarToggle) {
+        // Uncomment Below to persist sidebar toggle between refreshes
+        // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+        //     document.body.classList.toggle('sb-sidenav-toggled');
+        // }
+        sidebarToggle.addEventListener("click", (event) => {
+            event.preventDefault();
+            document.body.classList.toggle("sb-sidenav-toggled");
+            localStorage.setItem(
+                "sb|sidebar-toggle",
+                document.body.classList.contains("sb-sidenav-toggled")
+            );
+        });
+    }
+    </script>
+</body>
+
+</html>
