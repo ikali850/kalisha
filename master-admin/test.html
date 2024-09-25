@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative Blog Card Creator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <style>
+        #previewContainer {
+            border: 1px dashed #ccc;
+            min-height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Create Your Blog Cards</h2>
+        <div id="cardForm" class="mb-3">
+            <input type="text" class="form-control mb-2" placeholder="Card Header" id="cardHeader">
+            <textarea class="form-control mb-2" placeholder="Card Body" id="cardBody"></textarea>
+            <button id="addCard" class="btn btn-primary">Add Card</button>
+        </div>
+        <h3>Preview</h3>
+        <div id="previewContainer" class="row"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#addCard').click(function() {
+            const header = $('#cardHeader').val().trim();
+            const body = $('#cardBody').val().trim();
+
+            if (header) {
+                const card = `
+                <div class="col-md-4 mb-3 card draggable" style="cursor: move;">
+                    <div class="card-body">
+                        <h5 class="card-title">${header}</h5>
+                        <p class="card-text">${body || 'No content provided.'}</p>
+                    </div>
+                </div>
+            `;
+                $('#previewContainer').append(card);
+
+                // Clear input fields
+                $('#cardHeader').val('');
+                $('#cardBody').val('');
+
+                // Enable drag-and-drop functionality
+                makeCardsDraggable();
+            } else {
+                alert("Please enter a header for the card.");
+            }
+        });
+
+        function makeCardsDraggable() {
+            $("#previewContainer").sortable({
+                items: ".draggable",
+                placeholder: "ui-state-highlight"
+            });
+            $("#previewContainer").disableSelection();
+        }
+    });
+    </script>
+</body>
+
+</html>

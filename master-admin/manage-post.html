@@ -141,8 +141,8 @@
                     </ol>
                     <div class="card mb-4">
                         <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            All Post <button type="button" class="btn btn-outline-primary" style="margin-left: 80%;" data-bs-toggle="modal" data-bs-target="#addPostModal"><i class="fa-solid fa-plus"></i> New Post </button>
+                            <i class="fas fa-table me-1"></i> All Post
+                            <button type="button" class="btn btn-outline-primary" style="margin-left: 80%;" data-bs-toggle="modal" data-bs-target="#addPostModal"><i class="fa-solid fa-plus"></i> New Post </button>
                         </div>
                         <div class="card-body">
                             <table id="post-data" class="table table-bordered table-hover table-condensed">
@@ -487,7 +487,7 @@
                     </div>
                     <!-- Modal for add new post -->
                     <div class="modal fade" id="addPostModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                        <div class="modal-dialog modal-fullscreen">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="exampleModalLabel">Add Post</h1>
@@ -518,14 +518,26 @@
                                                             </div>
                                                         </div>
                                                         <div class="mb-3">
-                                                            <div class="form-floating">
-                                                                <select class="form-select" id="category-select" aria-label="Floating label select example" required>
-                                                                    <option selected>Category</option>
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
-                                                                </select>
-                                                                <label for="category-select">Select One Category</label>
+                                                            <label class="form-label ml-2"><strong>Select a Category</strong></label>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox" id="blog">
+                                                                <label class="form-check-label" for="blog">Blog</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox" id="news-update">
+                                                                <label class="form-check-label" for="news-update">News Update</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox" id="result">
+                                                                <label class="form-check-label" for="result">Result</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox" id="admit-card">
+                                                                <label class="form-check-label" for="admit-card">Admit Card</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox" id="application-form">
+                                                                <label class="form-check-label" for="application-form">Application Form</label>
                                                             </div>
                                                         </div>
                                                         <div class="mb-3">
@@ -570,7 +582,89 @@
                                                 <div class="accordion-body">
                                                     <div class="mb-3">
                                                         <div class="form-floating">
-                                                            <textarea class="form-control" id="contentData" name="content" placeholder="Content" style="height: 200px;"></textarea>
+                                                            <textarea class="form-control" id="contentData" name="content" placeholder="Content" style="height: 400px;" required>
+                                                                <div class="card mb-4">
+                                                                    <div class="card-header bg-success text-white p-3">
+                                                                        <strong>The Wonders of Space Exploration</strong>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <p>Space exploration has always fascinated humanity. From the first steps on the Moon to the latest Mars rover missions, our quest to understand the universe continues to evolve. The
+                                                                            discovery of exoplanets has opened new avenues in our search for extraterrestrial life. Programs like NASA's Artemis aim to return humans to the Moon, paving the way for future
+                                                                            missions to Mars. Each mission teaches us more about our solar system, and perhaps one day, we will find a new home among the stars.</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="card mb-4">
+                                                                    <div class="card-header bg-success text-white p-3">
+                                                                        <strong>The Impact of Climate Change</strong>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <p>Climate change poses one of the most significant threats to our planet today. Rising global temperatures lead to severe weather events, melting ice caps, and rising sea levels. Communities
+                                                                            worldwide are already experiencing the effects, from droughts in Africa to hurricanes in the Americas. Tackling climate change requires a collective effort involving governments,
+                                                                            businesses, and individuals. Sustainable practices such as renewable energy, waste reduction, and conservation can help mitigate these effects. It’s essential for future generations
+                                                                            that we take action now.</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="card mb-4">
+                                                                    <div class="card-header bg-success text-white p-3">
+                                                                        <strong>Advancements in Artificial Intelligence</strong>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <p>Artificial intelligence (AI) is transforming industries across the globe. From healthcare, where it aids in diagnostics, to finance, where it improves fraud detection, AI technologies
+                                                                            are enhancing efficiency and innovation. Machine learning algorithms analyze vast amounts of data, leading to insights that were previously unattainable. However, ethical considerations
+                                                                            surrounding AI, such as privacy concerns and job displacement, must be addressed. As we embrace this technology, fostering a dialogue about its implications is crucial for a balanced
+                                                                            future.</p>
+                                                                        <table class="table mt-3">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>Industry</th>
+                                                                                    <th>Application</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>Healthcare</td>
+                                                                                    <td>Diagnostics and personalized medicine</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Finance</td>
+                                                                                    <td>Fraud detection and algorithmic trading</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Manufacturing</td>
+                                                                                    <td>Predictive maintenance and automation</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="card mb-4">
+                                                                    <div class="card-header bg-success text-white p-3">
+                                                                        <strong>The Evolution of Renewable Energy</strong>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <p>Renewable energy sources, such as solar and wind power, have gained traction as essential alternatives to fossil fuels. The transition to renewables is crucial for reducing greenhouse
+                                                                            gas emissions and combating climate change. Solar panels are now more efficient and affordable than ever, while wind farms are sprouting up in many regions. Innovations in energy
+                                                                            storage technologies, such as batteries, are helping to address intermittency issues, making renewables a reliable energy source. As technology continues to advance, the future
+                                                                            of energy looks increasingly green.</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="card mb-4">
+                                                                    <div class="card-header bg-success text-white p-3">
+                                                                        <strong>The Role of Education in Society</strong>
+                                                                    </div>
+                                                                    <div class="card-body">
+                                                                        <p>Education is a fundamental pillar of society, shaping the minds of future generations. It fosters critical thinking, creativity, and social responsibility. In today’s rapidly changing
+                                                                            world, adapting education to meet the needs of the economy and society is vital. Emphasizing skills such as digital literacy and emotional intelligence prepares students for a
+                                                                            dynamic workforce. Moreover, access to quality education promotes equality and social mobility, empowering individuals to improve their circumstances. Investing in education is
+                                                                            investing in a better future for all.</p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </textarea>
                                                             <label for="content">Content</label>
                                                         </div>
                                                     </div>
@@ -607,8 +701,7 @@
                     <div class="d-flex align-items-center justify-content-between small">
                         <div class="text-muted">Copyright &copy; Your Website 2023</div>
                         <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
+                            <a href="#">Privacy Policy</a> &middot;
                             <a href="#">Terms &amp; Conditions</a>
                         </div>
                     </div>
